@@ -28,9 +28,11 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
             }}
             onClick={() => setSelected(title)}
             icon={icon}
+            routerLink={<Link to={to} />}
+        /* routerLink={to} */
         >
             <Typography>{title}</Typography>
-            <Link to={to} />
+            {/* <Link to={to} /> */}
         </MenuItem>
     );
 };
@@ -62,7 +64,7 @@ const Sidebar = () => {
             }}
         >
             <ProSidebarProvider collapsed={isCollapsed}>
-                <Menu iconShape="square">
+                <Menu icon="square">
                     {/* LOGO AND MENU ICON */}
                     <MenuItem
                         onClick={() => setIsCollapsed(!isCollapsed)}
@@ -110,7 +112,7 @@ const Sidebar = () => {
                                     Andrew Yip
                                 </Typography>
                                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                                    CEO / Founder
+                                    Founder / Entrepeneur / Software Engineer
                                 </Typography>
                             </Box>
                         </Box>
